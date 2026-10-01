@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> William Xu | Portfolio</title>
+<meta name="description" content="Portfolio of [Your Name]: personal statement, skills, and projects.">
+<style>
+  /* ===== EDIT GUIDE =====
+     1. Search for [square brackets] and replace each one with your own text.
+     2. Replace every link that contains YOUR-USERNAME.
+     3. Delete any skill you cannot back up in an interview.
+     4. Do not use "#" as a link target; broken links cost points.
+  ======================== */
+  :root{
+    --paper:#F3F6F8;
+    --ink:#1B2733;
+    --muted:#566676;
+    --rule:#D3DBE2;
+    --accent:#1D6B58;
+    --accent-ink:#FFFFFF;
+    --sans:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#121A21;
+      --ink:#E8EEF2;
+      --muted:#9AABB9;
+      --rule:#2B3944;
+      --accent:#5BC2A5;
+      --accent-ink:#0E1A16;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:1.0625rem;
+    line-height:1.6;
+  }
+  a{color:var(--accent);text-underline-offset:3px}
+  a:hover{text-decoration-thickness:2px}
+  a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+  .page{
+    max-width:70rem;
+    margin:0 auto;
+    padding:2.5rem 1.5rem 4rem;
+    display:grid;
+    grid-template-columns:15rem minmax(0,1fr);
+    gap:4rem;
+  }
+
+  /* Left column: identity and navigation */
+  .side{position:sticky;top:2.5rem;align-self:start}
+  .name{font-size:1.375rem;font-weight:700;margin:0;letter-spacing:-.01em}
+  .role{margin:.25rem 0 1.75rem;color:var(--muted)}
+  nav ul{list-style:none;margin:0 0 1.75rem;padding:0}
+  nav li{border-top:1px solid var(--rule)}
+  nav li:last-child{border-bottom:1px solid var(--rule)}
+  nav a{display:block;padding:.6rem 0;color:var(--ink);text-decoration:none;font-weight:600}
+  nav a:hover{color:var(--accent)}
+  .contact{font-size:.95rem;color:var(--muted)}
+  .contact a{display:block;margin-bottom:.25rem}
+
+  /* Right column: content */
+  main section{padding-bottom:3.5rem}
+  main section + section{border-top:1px solid var(--rule);padding-top:2.5rem}
+  h2{font-size:1.125rem;margin:0 0 1.25rem;font-weight:700}
+
+  /* The one memorable element: the personal statement set large */
+  .statement{
+    font-family:var(--serif);
+    font-size:clamp(1.75rem,4.2vw,2.75rem);
+    line-height:1.2;
+    letter-spacing:-.015em;
+    margin:0;
+    max-width:32rem;
+  }
+
+  /* Skills */
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.75rem 2.5rem;margin:0}
+  .skills dt{font-weight:700;margin-bottom:.35rem}
+  .skills dd{margin:0;color:var(--muted)}
+  .skills ul{list-style:none;margin:0;padding:0}
+  .skills li{padding:.2rem 0 .2rem 1rem;position:relative;color:var(--ink)}
+  .skills li::before{content:"";position:absolute;left:0;top:.95em;width:.45rem;height:2px;background:var(--accent)}
+
+  /* Projects */
+  .project{padding:1.5rem 0;border-top:1px solid var(--rule)}
+  .project:first-of-type{border-top:0;padding-top:0}
+  .project h3{margin:0 0 .35rem;font-size:1.25rem;line-height:1.3}
+  .project p{margin:0 0 .75rem;max-width:40rem}
+  .meta{color:var(--muted);font-size:.95rem;margin-bottom:.75rem}
+  .links a{
+    display:inline-block;margin-right:.75rem;padding:.35rem .9rem;
+    border:2px solid var(--accent);border-radius:4px;
+    font-weight:600;text-decoration:none;font-size:.95rem
+  }
+  .links a.primary{background:var(--accent);color:var(--accent-ink)}
+  .links a:hover{opacity:.85}
+
+  footer{margin-top:1rem;color:var(--muted);font-size:.9rem}
+
+  @media (max-width:52rem){
+    .page{grid-template-columns:1fr;gap:2rem;padding-top:1.5rem}
+    .side{position:static}
+    nav ul{display:flex;gap:1.25rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+    nav li,nav li:last-child{border:0}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="side">
+    <h1 class="name">William Xu</h1>
+    <p class="role">Rutgers Business School student persuing a major in finance</p>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+    <div class="contact">
+      <a href="mailto:YOUR-EMAIL@example.com">2006xuwilliam@gmail.com</a>
+      <a href="https://www.linkedin.com/in/YOUR-USERNAME">LinkedIn</a>
+      <a href="https://github.com/">GitHub</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" aria-labelledby="about-h">
+      <h2 id="about-h">Personal statement</h2>
+
+      <p class="statement">[I am a finance student who enjoys breaking down risk and return to help businesses grow with confidence.]</p>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-h">
+      <h2 id="skills-h">Skills</h2>
+      <dl class="skills">
+        <div>
+          <dt>Analysis</dt>
+          <dd><ul>
+            <li>Excel, Google sheets</li>
+            <li>Able to profficiently use Excel</li>
+            
+          <dt>Professional</dt>
+          <dd><ul>
+            <li>Research and written reports</li>
+            <li>Presenting to a team or class</li>
+            <li>[Add your own]</li>
+          </ul></dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-h">
+      <h2 id="projects-h">Projects</h2>
+
+      <article class="project">
+        <h3>[Management of an small business]</h3>
+        <p class="meta">[In my management skills class we created and presentation for an local small business based on how they can market better, trained employees, how to manages their finances etc.]</p>
+        <p>[Many small business dont know how to market, So we made a slide based on marketing slide showing how they can advertise there business without spending huge amounts of money for example, social media platforms like tiktok, instagram and even getting small local influencers deals for reviewing the food.]</p>
+        <div class="links">
+          <a class="primary" href="https://github.com/YOUR-USERNAME/PROJECT-1-REPO">View code</a>
+          <a href="https://YOUR-USERNAME.github.io/PROJECT-1-DEMO/">Live demo</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>[Project 2 name]</h3>
+        <p class="meta">[Course or setting, and tools used]</p>
+        <p>[Two sentences: what the problem was and what you did or found.]</p>
+        <div class="links">
+          <a class="primary" href="https://github.com/YOUR-USERNAME/PROJECT-2-REPO">View code</a>
+        </div>
+      </article>
+
+
+    <footer>&copy; 2028 William Xu</footer>
+  </main>
+
+</div>
+</body>
+</html>
